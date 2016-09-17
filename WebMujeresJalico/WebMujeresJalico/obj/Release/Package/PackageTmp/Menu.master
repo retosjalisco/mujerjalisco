@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="Menu.master.cs" Inherits="WebMujeresJalico.Menu" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Menu" runat="server">
+     <div id="men" style="color: #FFFFFF" >
+                 <center>
+                     <br />&nbsp;<asp:Image ID="Image3" runat="server" Height="114px" ImageUrl="~/Imagenes/perfil.png" Width="103px" />
+                 </center>
+                 <br class="auto-style2" />&nbsp;<a href="Comunidad.aspx" class="auto-style2"><asp:Image ID="Image2" runat="server" BorderStyle="None" Height="30px" ImageUrl="~/Imagenes/comu.png" Width="33px" CssClass="auto-style2" style="color: #FFFFFF" />
+                 <span class="auto-style1">Comunidad </span></a>
+                 <br class="auto-style2" />
+                 <br class="auto-style2" />&nbsp;<a href="Programas.aspx" class="auto-style2"><asp:Image ID="Image1" runat="server" BorderStyle="None" Height="26px" ImageUrl="~/Imagenes/program.png" Width="26px" CssClass="auto-style2" style="color: #FFFFFF" />
+                 <span class="auto-style1">&nbsp; Programas </span></a>
+                 <br class="auto-style2" />
+                 <br class="auto-style2" />&nbsp;<a href="Buzon.aspx" class="auto-style2"><asp:Image ID="Image4" runat="server" BorderStyle="None" Height="26px" ImageUrl="~/Imagenes/buzon.png" Width="26px" CssClass="auto-style2" style="color: #FFFFFF" />
+                 <span class="auto-style1">&nbsp; Buzon </span></a>
+                 <br class="auto-style2" />
+                 <br class="auto-style2" />&nbsp;<a href="Ventas.aspx" class="auto-style2"><asp:Image ID="Image5" runat="server" BorderStyle="None" Height="26px" ImageUrl="~/Imagenes/ventas.png" Width="26px" CssClass="auto-style2" style="color: #FFFFFF" />
+                 <span class="auto-style1">&nbsp; Ventas </span></a>
+                 <br class="auto-style2" />
+                 <br class="auto-style2" />&nbsp;<a href="Perfil.aspx" class="auto-style2"><asp:Image ID="Image6" runat="server" BorderStyle="None" Height="26px" ImageUrl="~/Imagenes/1.png" Width="26px" CssClass="auto-style2" style="color: #FFFFFF" />
+                 <span class="auto-style1">&nbsp; Perfill </span></a>
+                 <br class="auto-style2" />
+                 <br class="auto-style2" />&nbsp;<a href="/cerrar.aspx" class="auto-style2"><asp:Image ID="Image7" runat="server" BorderStyle="None" Height="23px" ImageUrl="~/Imagenes/6.png" Width="22px" CssClass="auto-style2" style="color: #FFFFFF" />
+                 <span class="auto-style1">&nbsp; Cerrar Sesion </span></a>
+             </div>
+             <br />
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="Contenido" runat="server">
+         <asp:ContentPlaceHolder ID="Contentido" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+

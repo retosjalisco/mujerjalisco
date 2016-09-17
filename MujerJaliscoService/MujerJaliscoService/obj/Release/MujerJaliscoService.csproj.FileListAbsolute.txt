@@ -1,0 +1,6 @@
+C:\Users\carlo\Documents\Visual Studio 2013\Projects\MujerJaliscoService\MujerJaliscoService\bin\MujerJaliscoService.dll.config
+C:\Users\carlo\Documents\Visual Studio 2013\Projects\MujerJaliscoService\MujerJaliscoService\bin\MujerJaliscoService.dll
+C:\Users\carlo\Documents\Visual Studio 2013\Projects\MujerJaliscoService\MujerJaliscoService\bin\MujerJaliscoService.pdb
+C:\Users\carlo\Documents\Visual Studio 2013\Projects\MujerJaliscoService\MujerJaliscoService\obj\Release\MujerJaliscoService.csprojResolveAssemblyReference.cache
+C:\Users\carlo\Documents\Visual Studio 2013\Projects\MujerJaliscoService\MujerJaliscoService\obj\Release\MujerJaliscoService.dll
+C:\Users\carlo\Documents\Visual Studio 2013\Projects\MujerJaliscoService\MujerJaliscoService\obj\Release\MujerJaliscoService.pdb

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="targetas">
+        <item>BANCO NACIONAL DE MEXICO</item>
+        <item>BANCO SANTANDER (MEXICO)</item>
+        <item>HSBC MEXICO</item>
+        <item>SCOTIABANK INVERLAT</item>
+        <item>BBVA BANCOMER</item>
+        <item>BANCO MERCANTIL DEL NORTE</item>
+        <item>BANCO INTERACCIONES</item>
+        <item>BANCO INBURSA</item>
+        <item>BANCA MIFEL</item>
+        <item>BANCO REGIONAL DE MONTERREY</item>
+        <item>BANCO INVEX</item>
+        <item>BANCO DEL BAJIO</item>
+        <item>BANSI</item>
+        <item>BANCA AFIRME</item>
+        <item>BANK OF AMERICA MEXICO</item>
+        <item>BANCO J.P. MORGAN</item>
+        <item>BANCO VE POR MAS</item>
+        <item>AMERICAN EXPRESS BANK (MEXICO)</item>
+        <item>INVESTA BANK</item>
+        <item>CIBANCO</item>
+        <item>BANK OF TOKYO-MITSUBISHI UFJ (MEXICO)</item>
+        <item>BANCO MONEX</item>
+        <item>BANCO AZTECA</item>
+        <item>BANCOPPEL</item>
+        <item>BANCO WAL-MART DE MEXICO ADELANTE</item>
+        <item>VOLKSWAGEN BANK</item>
+        <item>BANCO BASE</item>
+        <item>BANCO PAGATODO</item>
+        <item>BANCO FORJADORES</item>
+        <item>BANKAOOL</item>
+        <item>BANCO INMOBILIARIO MEXICANO</item>
+        <item>FUNDACION DONDE BANCO</item>
+        <item>BANCO BANCREA</item>
+    </string-array>
+
+    <string-array name="numeros">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="anio">
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+        <item>2027</item>
+        <item>2028</item>
+        <item>2029</item>
+        <item>2030</item>
+        <item>2031</item>
+        <item>2032</item>
+        <item>2033</item>
+        <item>2034</item>
+    </string-array>
+
+</resources>

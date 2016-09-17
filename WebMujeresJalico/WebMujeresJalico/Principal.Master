@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="WebMujeresJalico.Principal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #form1 {
+            height: 123px;
+        }
+        .auto-style1 {
+            color: #FFFFFF;
+        }
+        .auto-style2 {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+        <div id="contenedor" style="background-color: #e0d8d8">
+      <center style="height: 123px">
+            <div style="text-align: right">
+         
+
+           <asp:Button ID="Button2" runat="server" BackColor="#009999" BorderStyle="None" ForeColor="White" style="float:none" Text="Ventas" Width="85px" />
+         
+          <asp:Button ID="Button1" runat="server" BackColor="#FF8080" BorderStyle="None" ForeColor="White" style="margin-left:10px; text-align: right;" Text="Ingresar" Width="87px" Font-Bold="True" OnClick="Button1_Click" />
+            </div>
+            <img alt="" src="Imagenes/logo%20horizontal.png" style="height: 97px; width: 264px;  margin-top:0px;"  /></center>
+          
+           </div>
+     </div>
+        <asp:ContentPlaceHolder ID="Menu" runat="server" Visible="True">
+             <div id="men" style="color: #FFFFFF" >
+                 <center>
+                     <br />&nbsp;<asp:Image ID="Image3" runat="server" Height="114px" ImageUrl="~/Imagenes/perfil.png" Width="103px" />
+                 </center>
+                 <br class="auto-style2" />&nbsp;<a href="/Menu/Comunidad.aspx" class="auto-style2"><asp:Image ID="Image2" runat="server" BorderStyle="None" Height="30px" ImageUrl="~/Imagenes/comu.png" Width="33px" CssClass="auto-style2" style="color: #FFFFFF" />
+                 <span class="auto-style1">Comunidad </span></a>
+                 <br class="auto-style2" />
+                 <br class="auto-style2" />&nbsp;<a href="/Menu/Programas.aspx" class="auto-style2"><asp:Image ID="Image1" runat="server" BorderStyle="None" Height="26px" ImageUrl="~/Imagenes/program.png" Width="26px" CssClass="auto-style2" style="color: #FFFFFF" />
+                 <span class="auto-style1">&nbsp; Programas </span></a>
+                 <br class="auto-style2" />
+                 <br class="auto-style2" />&nbsp;<a href="/Menu/Buzon.aspx" class="auto-style2"><asp:Image ID="Image4" runat="server" BorderStyle="None" Height="26px" ImageUrl="~/Imagenes/buzon.png" Width="26px" CssClass="auto-style2" style="color: #FFFFFF" />
+                 <span class="auto-style1">&nbsp; Buzon </span></a>
+                 <br class="auto-style2" />
+                 <br class="auto-style2" />&nbsp;<a href="/Menu/Ventas.aspx" class="auto-style2"><asp:Image ID="Image5" runat="server" BorderStyle="None" Height="26px" ImageUrl="~/Imagenes/ventas.png" Width="26px" CssClass="auto-style2" style="color: #FFFFFF" />
+                 <span class="auto-style1">&nbsp; Ventas </span></a>
+                 <br class="auto-style2" />
+                 <br class="auto-style2" />&nbsp;<a href="/Menu/Perfil.aspx" class="auto-style2"><asp:Image ID="Image6" runat="server" BorderStyle="None" Height="26px" ImageUrl="~/Imagenes/1.png" Width="26px" CssClass="auto-style2" style="color: #FFFFFF" />
+                 <span class="auto-style1">&nbsp; Perfill </span></a>
+                 <br class="auto-style2" />
+                 <br class="auto-style2" />&nbsp;<a href="/Menu/cerrar.aspx" class="auto-style2"><asp:Image ID="Image7" runat="server" BorderStyle="None" Height="23px" ImageUrl="~/Imagenes/6.png" Width="22px" CssClass="auto-style2" style="color: #FFFFFF" />
+                 <span class="auto-style1">&nbsp; Cerrar Sesion </span></a>
+             </div>
+
+       </asp:ContentPlaceHolder>
+        
+        
+       <asp:ContentPlaceHolder ID="Contenido" runat="server">
+       </asp:ContentPlaceHolder>
+            
+        <div id="conte">
+       <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+       </asp:ContentPlaceHolder>
+      </div>
+      
+    </div>
+    </form>
+</body>
+</html>

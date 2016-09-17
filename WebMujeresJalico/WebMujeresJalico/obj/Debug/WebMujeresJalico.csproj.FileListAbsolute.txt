@@ -1,0 +1,6 @@
+C:\Users\MARIAANGELICA\Documents\Visual Studio 2013\Projects\WebMujeresJalico\WebMujeresJalico\bin\WebMujeresJalico.dll.config
+C:\Users\MARIAANGELICA\Documents\Visual Studio 2013\Projects\WebMujeresJalico\WebMujeresJalico\bin\WebMujeresJalico.dll
+C:\Users\MARIAANGELICA\Documents\Visual Studio 2013\Projects\WebMujeresJalico\WebMujeresJalico\bin\WebMujeresJalico.pdb
+C:\Users\MARIAANGELICA\Documents\Visual Studio 2013\Projects\WebMujeresJalico\WebMujeresJalico\obj\Debug\WebMujeresJalico.csprojResolveAssemblyReference.cache
+C:\Users\MARIAANGELICA\Documents\Visual Studio 2013\Projects\WebMujeresJalico\WebMujeresJalico\obj\Debug\WebMujeresJalico.dll
+C:\Users\MARIAANGELICA\Documents\Visual Studio 2013\Projects\WebMujeresJalico\WebMujeresJalico\obj\Debug\WebMujeresJalico.pdb

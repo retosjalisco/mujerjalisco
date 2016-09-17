@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/comunidad"
+            android:icon="@drawable/comunidadicon"
+            android:title="Comunidad" />
+        <item
+            android:id="@+id/programas"
+            android:icon="@drawable/programaicon"
+            android:title="Programas" />
+        <item
+            android:id="@+id/buzon"
+            android:icon="@drawable/buzonicon"
+            android:title="Buzón" />
+        <item
+            android:id="@+id/ventas"
+            android:icon="@drawable/ventasicon"
+            android:title="Ventas" />
+        <item
+            android:id="@+id/perfil"
+            android:icon="@drawable/perfilicon"
+            android:title="Perfil" />
+        <item
+            android:id="@+id/cerrarsesion"
+            android:icon="@drawable/cerrarsesionicon"
+            android:title="Cerrar Sesión" />
+    </group>
+
+</menu>
