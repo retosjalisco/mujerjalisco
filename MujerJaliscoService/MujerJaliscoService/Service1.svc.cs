@@ -547,7 +547,7 @@ namespace MujerJaliscoService
             com.listacomunidad = new List<comunidad>();
 
             //            string query = "SELECT ordenes.idorden,ordenes.idplatillo,ordenes.idcomensal, platillos.nombre,ordenes.cantidad,ordenes.estado,ordenes.domicilioenvio,ordenes.observacion,ordenes.tiempoentrega,ordenes.totalpagar,ordenes.Fecha,comensales.foto,comensales.nombre FROM ordenes,platillos,comensales WHERE ordenes.idplatillo = " + idplatillo + " and platillos.idplatillo = " + idplatillo + " and ordenes.idcomensal = comensales.idcomensal";
-            string query = "SELECT comunidad.idcomunidad,comunidad.toc,mujeres.nombre,mujeres.apellido,comunidad.comentario, comunidad.imagen FROM comunidad,mujeres WHERE  comunidad.idmujer=mujeres.idmujer";
+            string query = "SELECT comunidad.idcomunidad,comunidad.toc,mujeres.nombre,mujeres.apellido,comunidad.comentario, mujeres.fotomujer FROM comunidad,mujeres WHERE  comunidad.idmujer=mujeres.idmujer";
 
             conn.Open();
 
@@ -568,7 +568,7 @@ namespace MujerJaliscoService
                     o.nombremujer = ds.Tables[0].Rows[i]["nombre"].ToString();
                     o.apellidomujer = ds.Tables[0].Rows[i]["apellido"].ToString();
                     o.comentario = ds.Tables[0].Rows[i]["comentario"].ToString();
-                    o.imagen = ds.Tables[0].Rows[i]["imagen"].ToString();
+                    o.imagen = ds.Tables[0].Rows[i]["fotomujer"].ToString();
                     o.toc = ds.Tables[0].Rows[i]["toc"].ToString();
                     com.listacomunidad.Add(o);
 
@@ -599,8 +599,8 @@ namespace MujerJaliscoService
             adapter.Fill(ds);
             conn.Close();
 
-          //  try
-           // {
+            try
+            {
 
                 for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
@@ -616,10 +616,99 @@ namespace MujerJaliscoService
                     com.listaproductos.Add(o);
                 }
 
-           // }
-           // catch
-           // { }
+            }
+            catch
+            { }
             return com;
+        }
+
+        public Buzon getBuzon(int idmujer)
+        {
+            Buzon com = new Buzon();
+            com.listamensajes = new List<mensaje>();
+
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = StringConexion;
+
+            //            string query = "SELECT ordenes.idorden,ordenes.idplatillo,ordenes.idcomensal, platillos.nombre,ordenes.cantidad,ordenes.estado,ordenes.domicilioenvio,ordenes.observacion,ordenes.tiempoentrega,ordenes.totalpagar,ordenes.Fecha,comensales.foto,comensales.nombre FROM ordenes,platillos,comensales WHERE ordenes.idplatillo = " + idplatillo + " and platillos.idplatillo = " + idplatillo + " and ordenes.idcomensal = comensales.idcomensal";
+            string query = "SELECT mujeres.nombre as mnombre,mujeres.fotomujer as mfoto , usuariosedi.nombre as sedinombre, buzon.mensaje as mensaje, buzon.tipo as tipo FROM mujeres,usuariosedi,buzon WHERE  mujeres.idmujer=buzon.idmujer and usuariosedi.idsedi=buzon.idsedi and buzon.idmujer="+ idmujer +"";
+
+            conn.Open();
+
+            DataSet ds = new DataSet();
+            SqlCommand command = new SqlCommand(query, conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(ds);
+            conn.Close();
+
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                mensaje o = new mensaje();
+                o.imagenmujer = ds.Tables[0].Rows[0]["mfoto"].ToString();
+                o.buzonmensaje = ds.Tables[0].Rows[0]["mensaje"].ToString();
+                o.nombremujer = ds.Tables[0].Rows[0]["mnombre"].ToString();
+                o.nombresedi = ds.Tables[0].Rows[0]["sedinombre"].ToString();
+                o.tipo = Convert.ToInt16(ds.Tables[0].Rows[i]["tipo"]);
+                com.listamensajes.Add(o);
+
+            }
+
+            return com;
+        }
+
+        public producto getProducto(int idproducto)
+        {
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = StringConexion;
+
+            //            string query = "SELECT ordenes.idorden,ordenes.idplatillo,ordenes.idcomensal, platillos.nombre,ordenes.cantidad,ordenes.estado,ordenes.domicilioenvio,ordenes.observacion,ordenes.tiempoentrega,ordenes.totalpagar,ordenes.Fecha,comensales.foto,comensales.nombre FROM ordenes,platillos,comensales WHERE ordenes.idplatillo = " + idplatillo + " and platillos.idplatillo = " + idplatillo + " and ordenes.idcomensal = comensales.idcomensal";
+            string query = "SELECT productos.idproducto,productos.nombreproducto,productos.descripcion,productos.precio,productos.foto,mujeres.apellido,mujeres.nombre FROM productos,mujeres WHERE  productos.idmujer=mujeres.idmujer and productos.idproducto=" + idproducto + "";
+
+            conn.Open();
+
+            DataSet ds = new DataSet();
+            SqlCommand command = new SqlCommand(query, conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(ds);
+            conn.Close();
+
+            producto o = new producto();
+            o.idproducto = Convert.ToInt16(ds.Tables[0].Rows[0]["idproducto"]);
+            o.nombre = ds.Tables[0].Rows[0]["nombreproducto"].ToString();
+            o.nombremujer = ds.Tables[0].Rows[0]["nombre"].ToString();
+            o.apellidomujer = ds.Tables[0].Rows[0]["apellido"].ToString();
+            o.imagen = ds.Tables[0].Rows[0]["foto"].ToString();
+            o.descripcion = ds.Tables[0].Rows[0]["descripcion"].ToString();
+            o.precio = Convert.ToInt16(ds.Tables[0].Rows[0]["precio"]);
+         
+            return o;
+        }
+
+        public  mujer getDetalleMujer(int idmujer)
+        {
+            SqlConnection conn = new SqlConnection();
+            conn.ConnectionString = StringConexion;
+
+            //            string query = "SELECT ordenes.idorden,ordenes.idplatillo,ordenes.idcomensal, platillos.nombre,ordenes.cantidad,ordenes.estado,ordenes.domicilioenvio,ordenes.observacion,ordenes.tiempoentrega,ordenes.totalpagar,ordenes.Fecha,comensales.foto,comensales.nombre FROM ordenes,platillos,comensales WHERE ordenes.idplatillo = " + idplatillo + " and platillos.idplatillo = " + idplatillo + " and ordenes.idcomensal = comensales.idcomensal";
+            string query = "SELECT * FROM mujeres WHERE  mujeres.idmujer=" + idmujer + "";
+
+            conn.Open();
+
+            DataSet ds = new DataSet();
+            SqlCommand command = new SqlCommand(query, conn);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            adapter.Fill(ds);
+            conn.Close();
+
+            mujer o = new mujer();
+            o.idmujer= Convert.ToInt16(ds.Tables[0].Rows[0]["idmujer"]);
+            o.nombre = ds.Tables[0].Rows[0]["nombre"].ToString();
+            o.direccion = ds.Tables[0].Rows[0]["direccion"].ToString();
+            o.apellido = ds.Tables[0].Rows[0]["apellido"].ToString();
+            o.fotomujer = ds.Tables[0].Rows[0]["fotomujer"].ToString();
+            o.email = ds.Tables[0].Rows[0]["email"].ToString();
+            o.telefono = ds.Tables[0].Rows[0]["telefono"].ToString();
+            return o;
         }
 
     }

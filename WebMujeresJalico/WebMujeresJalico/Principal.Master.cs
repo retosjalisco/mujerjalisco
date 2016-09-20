@@ -16,7 +16,12 @@ namespace WebMujeresJalico
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/Login.aspx");
+            Response.Redirect("~/Login.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

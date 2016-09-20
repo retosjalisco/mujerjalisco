@@ -4,3 +4,9 @@ C:\Users\carlo\documents\visual studio 2013\Projects\MujerJaliscoService\MujerJa
 C:\Users\carlo\documents\visual studio 2013\Projects\MujerJaliscoService\MujerJaliscoService\bin\MujerJaliscoService.pdb
 C:\Users\carlo\documents\visual studio 2013\Projects\MujerJaliscoService\MujerJaliscoService\obj\Debug\MujerJaliscoService.dll
 C:\Users\carlo\documents\visual studio 2013\Projects\MujerJaliscoService\MujerJaliscoService\obj\Debug\MujerJaliscoService.pdb
+C:\Users\carlo\Documents\GitHub\mujerjalisco\MujerJaliscoService\MujerJaliscoService\obj\Debug\MujerJaliscoService.csprojResolveAssemblyReference.cache
+C:\Users\carlo\Documents\GitHub\mujerjalisco\MujerJaliscoService\MujerJaliscoService\obj\Debug\MujerJaliscoService.dll
+C:\Users\carlo\Documents\GitHub\mujerjalisco\MujerJaliscoService\MujerJaliscoService\obj\Debug\MujerJaliscoService.pdb
+C:\Users\carlo\Documents\GitHub\mujerjalisco\MujerJaliscoService\MujerJaliscoService\bin\MujerJaliscoService.dll.config
+C:\Users\carlo\Documents\GitHub\mujerjalisco\MujerJaliscoService\MujerJaliscoService\bin\MujerJaliscoService.dll
+C:\Users\carlo\Documents\GitHub\mujerjalisco\MujerJaliscoService\MujerJaliscoService\bin\MujerJaliscoService.pdb

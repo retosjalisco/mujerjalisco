@@ -29,7 +29,7 @@
             <div style="text-align: right">
          
 
-           <asp:Button ID="Button2" runat="server" BackColor="#009999" BorderStyle="None" ForeColor="White" style="float:none" Text="Ventas" Width="85px" />
+           <asp:Button ID="Button2" runat="server" BackColor="#009999" BorderStyle="None" ForeColor="White" style="float:none" Text="Ventas" Width="85px" OnClick="Button2_Click" />
          
           <asp:Button ID="Button1" runat="server" BackColor="#FF8080" BorderStyle="None" ForeColor="White" style="margin-left:10px; text-align: right;" Text="Ingresar" Width="87px" Font-Bold="True" OnClick="Button1_Click" />
             </div>

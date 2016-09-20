@@ -17,6 +17,7 @@ namespace MujerJaliscoService
     public interface IService1
     {
 
+
         [OperationContract]
         [WebGet(UriTemplate = "/sesion/?email={email}&clave={clave}", ResponseFormat = WebMessageFormat.Json)]
         Status getLogin(string email, string clave);
@@ -73,7 +74,6 @@ namespace MujerJaliscoService
         [WebGet(UriTemplate = "/agregarproducto/?idmujer={idmujer}&nombre={nombre}&descripcion={descripcion}&precio={precio}", ResponseFormat = WebMessageFormat.Json)]
         Status SetProducto(int idmujer, string nombre, string descripcion, string precio);
 
-
         [OperationContract]
         [WebGet(UriTemplate = "/obtenercomunidad", ResponseFormat = WebMessageFormat.Json)]
         Comunidad getComunidad();
@@ -81,6 +81,18 @@ namespace MujerJaliscoService
         [OperationContract]
         [WebGet(UriTemplate = "/obtenerventas", ResponseFormat = WebMessageFormat.Json)]
         Ventas getVentas();
+
+        [OperationContract]
+        [WebGet(UriTemplate = "/obtenermensaje/?idmujer={idmujer}", ResponseFormat = WebMessageFormat.Json)]
+        Buzon getBuzon(int idmujer);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "/obtenerproducto/?idproducto={idproducto}", ResponseFormat = WebMessageFormat.Json)]
+        producto getProducto(int idproducto);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "/detallemujer/?idmujer={idmujer}", ResponseFormat = WebMessageFormat.Json)]
+        mujer getDetalleMujer(int idmujer);
     }
 
     [DataContract]
@@ -105,6 +117,25 @@ namespace MujerJaliscoService
         [DataMember]
         public string toc;
     }
+
+    public class mujer
+    {
+        [DataMember]
+        public int idmujer;
+        [DataMember]
+        public string nombre;
+        [DataMember]
+        public string apellido;
+        [DataMember]
+        public string fotomujer;
+        [DataMember]
+        public string email;
+        [DataMember]
+        public string telefono;
+        [DataMember]
+        public string direccion;
+    }
+    
 
     [DataContract]
     public class Comunidad
@@ -136,6 +167,27 @@ namespace MujerJaliscoService
     {
         [DataMember]
         public List<producto> listaproductos { get; set; }
+    }
+
+    [DataContract]
+    public class Buzon
+    {
+        [DataMember]
+        public List<mensaje> listamensajes { get; set; }
+    }
+
+    public class mensaje
+    {
+        [DataMember]
+        public string nombremujer;
+        [DataMember]
+        public string imagenmujer;
+        [DataMember]
+        public string nombresedi;
+        [DataMember]
+        public string buzonmensaje;
+        [DataMember]
+        public int tipo;
     }
 
 }
